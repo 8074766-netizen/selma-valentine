@@ -172,18 +172,35 @@ function handleAnswer(idx) {
     const q = questions[currentQuestionIndex];
 
     if (idx === q.answer) {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            loadQuestion();
-        } else {
-            document.getElementById('progress').style.width = "100%";
-            setTimeout(() => {
-                switchScreen('quiz-screen', 'proposal-screen');
-            }, 500);
-        }
+        showFeedback(true); // Show Oui Bird
+
+        setTimeout(() => {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('progress').style.width = "100%";
+                setTimeout(() => {
+                    switchScreen('quiz-screen', 'proposal-screen');
+                }, 500);
+            }
+        }, 1500); // Wait for animation
     } else {
+        showFeedback(false); // Show Non Bird
         showError(q.error);
     }
+}
+
+function showFeedback(isCorrect) {
+    const overlay = document.getElementById('feedback-overlay');
+    const img = document.getElementById('feedback-img');
+
+    img.src = isCorrect ? 'assets/oui.png' : 'assets/non.png';
+    overlay.classList.add('show');
+
+    setTimeout(() => {
+        overlay.classList.remove('show');
+    }, 1200);
 }
 
 function showError(msg) {

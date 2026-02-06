@@ -570,3 +570,64 @@ input[type='number'] {
     }
 }
 
+
+/* --- Feedback Overlay --- */
+.feedback-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    z-index: 200;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feedback-overlay.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.feedback-img {
+    width: 200px; /* Adjust based on preference */
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+/* --- Floating Selma Heart --- */
+.selma-floater {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 5;
+    animation: wander 20s infinite linear;
+    top: 10%;
+    left: 10%;
+}
+
+.selma-heart-frame {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/selma.png');
+    background-size: cover;
+    background-position: center;
+    /* CSS Heart Shape Clip Path optimized for 80x80 box */
+    clip-path: path('M40 72.82 L 35.16 68.42 C 18 52.8 6.66 42.53 6.66 29.93 C 6.66 19.66 14.73 11.6 25 11.6 C 30.8 11.6 36.36 14.3 40 18.56 C 43.63 14.3 49.2 11.6 55 11.6 C 65.26 11.6 73.33 19.66 73.33 29.93 C 73.33 42.53 62 52.8 44.83 68.42 L 40 72.82 Z');
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5); 
+    animation: beat 2s infinite ease-in-out;
+    background-color: var(--primary-rose); /* Fallback color */
+}
+
+@keyframes wander {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(250px, 100px) rotate(10deg); }
+    50% { transform: translate(50px, 400px) rotate(-10deg); }
+    75% { transform: translate(-100px, 200px) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
