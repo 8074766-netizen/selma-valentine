@@ -585,11 +585,11 @@ input[type='number'] {
 /* --- Feedback Overlay --- */
 .feedback-overlay {
     position: absolute;
-    /* Changed from fixed */
-    top: 150px;
-    /* Move to top area of phone */
+    top: auto;
+    bottom: 120px;
+    /* Position at the bottom */
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translateX(-50%) scale(0.5);
     z-index: 200;
     pointer-events: none;
     opacity: 0;
@@ -598,12 +598,12 @@ input[type='number'] {
 
 .feedback-overlay.show {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateX(-50%) scale(1);
 }
 
 .feedback-img {
-    width: 150px;
-    /* Slightly smaller to fit nicely */
+    width: 100px;
+    /* Smaller size */
     height: auto;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
