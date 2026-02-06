@@ -5,46 +5,46 @@ let attempts = 0;
 
 const questions = [
     {
-        q: "What is your favourite Cologne on a man?",
+        q: "What is your favourite cologne on a man?",
         options: ["Dior Sauvage", "Dakkar Noir", "Creed Aventus"],
         answer: 0,
-        error: "Cherieee arret loohhh"
+        error: "Cherieee arrête loohhh"
     },
     {
-        q: "Whats your Favourite Color?",
+        q: "What's your favourite color?",
         options: ["Pink", "Red", "Brown"],
         answer: 2,
-        error: "think about my skin color hhaha"
+        error: "Think about my skin color hhaha"
     },
     {
         q: "Where did we go on our second date?",
         options: ["Prison", "Exporail", "Ginko Café"],
         answer: 1,
-        error: "This one way easy bidi -_-"
+        error: "This one was way easy bidi -_-"
     },
     {
         q: "What were you wearing on our first date?",
         options: ["Red and Blue", "Brown and Burgundy", "Black and Pink"],
         answer: 1,
-        error: "hmm maybe one of us is color-blind :S"
+        error: "Hmm maybe one of us is color-blind :S"
     },
     {
-        q: "Whats my favourite drink?",
+        q: "What's my favourite drink?",
         options: ["Beer", "Orange Juice", "Mango Juice"],
         answer: 1,
-        error: "umm excuse me?"
+        error: "Umm excuse me?"
     },
     {
-        q: "My favourite Hairstyle on you",
-        options: ["messy bun", "bald", "Ponytail"],
+        q: "What's my favourite hairstyle on you?",
+        options: ["Messy bun", "Bald", "Ponytail"],
         answer: 0,
-        error: "cmonnnnnnnnn"
+        error: "Cmonnnnnnnnn"
     },
     {
-        q: "Who said I love you first?",
+        q: "Who said 'I love you' first?",
         options: ["Muhit Ali", "Selma Lavoie", "Ricardo the Chef"],
         answer: 0,
-        error: "as long as it wasn’t Ricardo -_-"
+        error: "As long as it wasn’t Ricardo -_-"
     },
     {
         q: "Which nickname is your favourite?",
@@ -53,7 +53,7 @@ const questions = [
         error: "Pick Cherie :)"
     },
     {
-        q: "Whats your favourite Ice Cream Flavours?",
+        q: "What's your favourite ice cream flavour?",
         options: ["Vanilla and Chocolate", "Strawberry and Pistachio", "Vanilla and Pistachio"],
         answer: 2,
         error: "Beinn laaaaaaaa"
@@ -62,7 +62,7 @@ const questions = [
         q: "Where did I work as a teenager?",
         options: ["Clothing Shop", "Bowling Alley", "Spiderman"],
         answer: 1,
-        error: "sad face emoji Cherie :("
+        error: "Sad face emoji Cherie :("
     }
 ];
 
