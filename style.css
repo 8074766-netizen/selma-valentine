@@ -573,7 +573,8 @@ input[type='number'] {
     }
 
     .error-toast {
-        bottom: 50%;
+        bottom: auto;
+        top: 80px;
         width: 90%;
         font-size: 1.1rem;
         padding: 15px 20px;
