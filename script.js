@@ -267,7 +267,8 @@ function celebrate() {
         heart.innerHTML = '❤️';
         heart.style.left = Math.random() * 100 + 'vw';
         heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
-        heart.style.zIndex = "100";
+        heart.style.zIndex = "1";
+        heart.style.pointerEvents = "none";
         document.body.appendChild(heart);
     }, 100);
 }

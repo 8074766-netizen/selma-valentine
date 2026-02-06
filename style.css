@@ -518,6 +518,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 input[type='number'] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 /* --- Mobile Optimization --- */
@@ -569,6 +570,13 @@ input[type='number'] {
 
     #success-msg h1 {
         font-size: 2.5rem !important;
+    }
+
+    .error-toast {
+        bottom: 50%;
+        width: 90%;
+        font-size: 1.1rem;
+        padding: 15px 20px;
     }
 }
 
