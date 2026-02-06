@@ -184,7 +184,7 @@ function handleAnswer(idx) {
                     switchScreen('quiz-screen', 'proposal-screen');
                 }, 500);
             }
-        }, 1500); // Wait for animation
+        }, 800); // Wait for animation
     } else {
         showFeedback(false); // Show Non Bird
         showError(q.error);
@@ -200,7 +200,7 @@ function showFeedback(isCorrect) {
 
     setTimeout(() => {
         overlay.classList.remove('show');
-    }, 1200);
+    }, 700);
 }
 
 function showError(msg) {

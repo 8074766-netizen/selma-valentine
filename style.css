@@ -519,11 +519,13 @@ input[type='number']::-webkit-outer-spin-button {
 input[type='number'] {
     -moz-appearance: textfield;
 }
+
 /* --- Mobile Optimization --- */
 @media (max-width: 480px) {
     body {
         align-items: flex-start;
-        background: var(--bg-deep); /* Simplify bg for mobile perf */
+        background: var(--bg-deep);
+        /* Simplify bg for mobile perf */
     }
 
     .app-display {
@@ -533,7 +535,7 @@ input[type='number'] {
         border: none;
         box-shadow: none;
     }
-    
+
     .notch {
         width: 40%;
         border-bottom-left-radius: 15px;
@@ -554,7 +556,7 @@ input[type='number'] {
         padding: 18px 20px;
         font-size: 1rem;
     }
-    
+
     .proposal-img {
         width: 100px;
         height: 100px;
@@ -573,8 +575,10 @@ input[type='number'] {
 
 /* --- Feedback Overlay --- */
 .feedback-overlay {
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    /* Changed from fixed */
+    top: 150px;
+    /* Move to top area of phone */
     left: 50%;
     transform: translate(-50%, -50%) scale(0.5);
     z-index: 200;
@@ -589,9 +593,10 @@ input[type='number'] {
 }
 
 .feedback-img {
-    width: 200px; /* Adjust based on preference */
+    width: 150px;
+    /* Slightly smaller to fit nicely */
     height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
 /* --- Floating Selma Heart --- */
@@ -613,21 +618,42 @@ input[type='number'] {
     background-position: center;
     /* CSS Heart Shape Clip Path optimized for 80x80 box */
     clip-path: path('M40 72.82 L 35.16 68.42 C 18 52.8 6.66 42.53 6.66 29.93 C 6.66 19.66 14.73 11.6 25 11.6 C 30.8 11.6 36.36 14.3 40 18.56 C 43.63 14.3 49.2 11.6 55 11.6 C 65.26 11.6 73.33 19.66 73.33 29.93 C 73.33 42.53 62 52.8 44.83 68.42 L 40 72.82 Z');
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.5); 
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
     animation: beat 2s infinite ease-in-out;
-    background-color: var(--primary-rose); /* Fallback color */
+    background-color: var(--primary-rose);
+    /* Fallback color */
 }
 
 @keyframes wander {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(250px, 100px) rotate(10deg); }
-    50% { transform: translate(50px, 400px) rotate(-10deg); }
-    75% { transform: translate(-100px, 200px) rotate(5deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(250px, 100px) rotate(10deg);
+    }
+
+    50% {
+        transform: translate(50px, 400px) rotate(-10deg);
+    }
+
+    75% {
+        transform: translate(-100px, 200px) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
 }
 
 @keyframes beat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
 
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
