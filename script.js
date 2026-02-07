@@ -1,4 +1,4 @@
-const CORRECT_PASSCODE = "04112025";
+const CORRECT_PASSCODE = "04122025";
 let currentPasscode = "";
 let currentQuestionIndex = 0;
 let attempts = 0;
